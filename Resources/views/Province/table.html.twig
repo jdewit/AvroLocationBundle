@@ -1,0 +1,41 @@
+<table class="table-condensed table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>{{ paginator.link('name') | raw }}</th>
+            <th style="width: 190px;">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for province in provinces %}
+            <tr>
+                <td>{{ province.name }}</td>
+                <td class="center-align">
+                    <div class="btn-group" style="display: inline-block;">
+                        <a class="btn btn-primary get-modal" href="{{ path('avro_user_province_edit',{'id': province.id}) }}"><i class="icon-pencil icon-white"></i> Edit</a>
+                        <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle"><span class="caret"></span></button>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a class="get-modal" href="{{ path('avro_user_province_edit',{'id': province.id}) }}"><i class="icon-pencil"></i> Edit</a></li>
+                            {% if province.isDeleted %}
+                            <li><a href="{{ path('avro_user_province_restore',{'id': province.id}) }}"><i class="icon-refresh"></i> Restore</a></li>
+
+                            {% else %}
+                            <li><a href="{{ path('avro_user_province_delete',{'id': province.id}) }}"><i class="icon-remove"></i> Delete</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="0" class="left-align">0 Provinces Found</td>
+            </tr>
+         {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="100%" class="center-align">
+                {{ paginator.render | raw }}
+            </td>
+        </tr>
+    </tfoot>
+</table>

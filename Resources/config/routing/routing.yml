@@ -1,0 +1,45 @@
+avro_location_country_list:
+    pattern:   /countrys
+    defaults:  { _controller: AvroLocationBundle:Country:list }
+avro_location_country_edit:
+    pattern:   /country/edit/{id}
+    defaults:  { _controller: AvroLocationBundle:Country:edit }
+avro_location_country_delete:
+    pattern:   /country/delete/{id}
+    defaults:  { _controller: AvroLocationBundle:Country:delete }
+avro_location_country_restore:
+    pattern:   /country/restore/{id}
+    defaults:  { _controller: AvroLocationBundle:Country:restore }
+
+avro_location_province_get:
+    pattern:   /province/get/{id}
+    defaults:  { _controller: AvroLocationBundle:Province:get, id: false }
+avro_location_province_list:
+    pattern:   /provinces
+    defaults:  { _controller: AvroLocationBundle:Province:list }
+avro_location_province_edit:
+    pattern:   /province/edit/{id}
+    defaults:  { _controller: AvroLocationBundle:Province:edit }
+avro_location_province_delete:
+    pattern:   /province/delete/{id}
+    defaults:  { _controller: AvroLocationBundle:Province:delete }
+avro_location_province_restore:
+    pattern:   /province/restore/{id}
+    defaults:  { _controller: AvroLocationBundle:Province:restore }
+
+avro_location_city_get:
+    pattern:   /city/get/{id}
+    defaults:  { _controller: AvroLocationBundle:City:get, id: false }
+avro_location_city_list:
+    pattern:   /citys
+    defaults:  { _controller: AvroLocationBundle:City:list }
+avro_location_city_edit:
+    pattern:   /city/edit/{id}
+    defaults:  { _controller: AvroLocationBundle:City:edit }
+avro_location_city_delete:
+    pattern:   /city/delete/{id}
+    defaults:  { _controller: AvroLocationBundle:City:delete }
+avro_location_city_restore:
+    pattern:   /city/restore/{id}
+    defaults:  { _controller: AvroLocationBundle:City:restore }
+
