@@ -1,0 +1,21 @@
+{
+    "name": "avro/location-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony2 location Bundle",
+    "keywords": ["location"],
+    "homepage": "http://github.com/jdewit/AvroLocationBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joris de Wit",
+            "email": "joris.w.dewit@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2"
+    },
+    "autoload": {
+        "psr-0": { "Avro\\LocationBundle": "" }
+    },
+    "target-dir": "Avro/LocationBundle"
+}
